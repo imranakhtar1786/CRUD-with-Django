@@ -1,0 +1,50 @@
+{% extends "index.html" %}
+{% load static %}
+{% block title %}
+<title> CRUD | FORM </title>
+{% endblock %}
+{% block body %}
+<div class="container-fluid w-100 my-2">
+    <div class="w-75 m-auto">
+    <h5 class="bg-black text-light p-2 text-center ">Create Employee Record</h5>
+        <form method="post" action="">
+        {% csrf_token %}
+        <label class="my-2 ps-1">Name</label>
+        <input type="text" name="name" placeholder="Full Name..." required class="form-control">
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="my-2 ps-1">Email</label>
+                <input type="email" name="email" placeholder="Email...." required class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="my-2 ps-1">Phone No</label>
+                <input type="text" name="phone" placeholder="Phone no...." required class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="my-2 ps-1">Designation</label>
+                <input type="text" name="Designation" placeholder="Designation...." required class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="my-2 ps-1">Salery</label>
+                <input type="number" name="salery" placeholder="Salery....." required class="form-control">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6 mb-3">
+                <label class="my-2 ps-1">City</label>
+                <input type="text" name="City" placeholder="City name...." required class="form-control">
+            </div>
+            <div class="col-md-6 mb-3">
+                <label class="my-2 ps-1">State</i></label>
+                <input type="text" name="State" placeholder="State Name...." required class="form-control">
+            </div>
+        </div>
+        <div class="mb-3">
+            <button type="Submit" class="bg-dark text-light w-100">Submit </button>
+        </div>
+        </form>
+    </div>
+</div>
+{% endblock %}
